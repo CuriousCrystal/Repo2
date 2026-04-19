@@ -121,7 +121,7 @@ def takeCommand():
                 audio = ans.listen(source, timeout=5, phrase_time_limit=10)
             except sr.WaitTimeoutError:
                 print("Listening timed out.")
-                return ""
+                return input("Please type your command: ")
 
             try:
                 print("Recognizing...")
@@ -130,10 +130,10 @@ def takeCommand():
                 return text
             except sr.UnknownValueError:
                 print("Sorry, could not understand the audio.")
-                return ""
+                return input("Please type your command: ")
             except sr.RequestError as e:
                 print(f"Could not request results; {e}")
-                return ""
+                return input("Please type your command: ")
     except Exception as e:
         print(f"Microphone not available: {e}")
         print("Falling back to text input...")
@@ -147,6 +147,11 @@ query = "Hey, I'm August."
 speak(query)
 while True:
     query = takeCommand()
+    
+    # If the user just pressed Enter without typing anything, don't do anything
+    if not query.strip():
+        continue
+
     # todo Add more sites
     sites = [["youtube", "https://www.youtube.com/"], ["instagram", "https://www.instagram.com/"],
              ["facebook", "https://www.facebook.com/"],
