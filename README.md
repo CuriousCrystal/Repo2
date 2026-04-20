@@ -1,10 +1,5 @@
 Event Crowd Management & AI Assistant
 
-🤖 AI-powered voice assistant (Grok from X.AI)
-📊 Crowd management dashboard (React + FastAPI)
-🔐 Production-grade auth (JWT + Role-based access)
-📈 Analytics & alerting (SQLite + Real-time notifications)
-
 What Works (Really Well)
 🎤 Voice Assistant ("August")
 
