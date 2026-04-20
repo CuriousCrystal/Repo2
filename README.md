@@ -42,31 +42,3 @@ bash# You need:
 Backend Setup
 bash# Install dependencies
 pip install -r requirements.txt
-
-# Create .env file
-cp .env.example .env
-# Edit .env and add your XAI_API_KEY
-
-# Start the API server
-uvicorn data_engine:app --reload
-Backend runs on: http://localhost:8000
-API docs available at: http://localhost:8000/docs
-Frontend Setup
-bashcd dashboard
-
-# Install dependencies
-npm install
-
-# Start dev server
-npm run dev
-Dashboard runs on: http://localhost:5173
-Run the Voice Assistant
-bashpython main.py
-
-Default Credentials
-Admin:   admin / admin123       (full access)
-Manager: manager / manager123   (view analytics & alerts)
-Viewer:  viewer / viewer123     (read-only dashboard)
-
-
-
