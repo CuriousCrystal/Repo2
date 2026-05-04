@@ -1,7 +1,5 @@
 Event Crowd Management & AI Assistant
 
-What Works (Really Well)
-🎤 Voice Assistant ("August")
 
 Listens via microphone, speaks responses
 Can fetch live crowd data and make recommendations
